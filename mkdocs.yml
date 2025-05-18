@@ -1,0 +1,49 @@
+site_name: Engineering Knowledge Base
+site_url: https://your-org.github.io/kb-engineering/
+site_description: Engineering team knowledge base and documentation
+repo_url: https://github.com/your-org/kb-engineering
+edit_uri: edit/main/docs/
+
+# Inherit theme from main repository
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - search.suggest
+    - search.highlight
+  palette:
+    - scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/workspace-selector.js
+
+plugins:
+  - search
+  - git-revision-date-localized
+  - minify
+
+nav:
+  - Home: index.md
+  - Guides:
+    - Getting Started: guides/getting-started.md
+    - Best Practices: guides/best-practices.md
+  - Reference:
+    - API Documentation: reference/api.md
